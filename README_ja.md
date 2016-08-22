@@ -1,23 +1,17 @@
-# manuals
+# Contents
 
-- Project Overview ([日本語](overview_ja.md)／[English](overview.md))
+* Overview ([English](overview.md)/[日本語](overview_ja.md))
+* Getting Started ([English](getting_started.md)/[日本語](getting_started_ja.md))
 
-- Getting Started ([日本語](getting_started_ja.md)／[English](getting_started.md))
+## Dictionary Project
 
-- 辞書生成統合ツール (NLP4L-DICT)
+* Overview ([English](dict/dict_overview.md)/[日本語](dict/dict_overview_ja.md))
+* アーキテクチャ ([English](dict/dict_architecture.md)/[日本語](dict/dict_architecture_ja.md))
+* ユーザガイド ([English](dict/dict_users_guide.md)/[日本語](dict/dict_users_guide_ja.md))
+* プログラマガイド ([English](dict/dict_programmers_guide.md)/[日本語](dict/dict_programmers_guide_ja.md))
 
-	- Overview ([日本語](dict/dict_overview_ja.md)／[English](dict/dict_overview.md))
+## Learning to Rank Project
 
-	- User's Guide ([日本語](dict/dict_users_guide_ja.md)／[English](dict/dict_users_guide.md))
-
-	- Programming Guide ([日本語](dict/dict_programming_guide_ja.md)／[English](dict/dict_programming_guide.md))
-
-
-- ランキング学習ツール (NLP4L-LTR)
-
-	- Overview ([日本語](ltr/ltr_overview_ja.md)／[English](ltr/ltr_overview.md))
-
-	- User's Guide ([日本語](ltr/ltr_users_guide_ja.md)／[English](ltr/ltr_users_guide.md))
-
-
-
+* Overview ([English](ltr/ltr_overview.md)/[日本語](ltr/ltr_overview_ja.md))
+* アーキテクチャ ([English](ltr/ltr_architecture.md)/[日本語](ltr/ltr_architecture_ja.md))
+* ユーザガイド ([English](ltr/ltr_users_guide.md)/[日本語](ltr/ltr_users_guide_ja.md))
