@@ -39,7 +39,7 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 以下のコンフィグレーションを参照してください。
 
-```json
+```
 {
   processors : [
     {
@@ -74,6 +74,7 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 
 以下のコンフィグレーション例を参考にしてください。
+
 ```
 {
   processors : [
