@@ -11,5 +11,5 @@
 
 - Standard Features
 
-	- Replay機能 ([日本語](dict_replay_ja.md)／[English](dict_replay.md))
+	- リプレイ機能 ([日本語](dict_replay_ja.md)／[English](dict_replay.md))
 
