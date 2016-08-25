@@ -38,6 +38,7 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 
 以下のコンフィグレーションを参照してください。
+
 ```
 {
   processors : [
@@ -58,10 +59,10 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 ### settings設定
 
-固有表現抽出プロセッサーで設定可能なのsettingsは、以下の通りです。
+固有表現抽出プロセッサーで設定可能なsettingsは、以下の通りです。
 
 |name|required|default|description|
-|:--|:--:|:--|
+|:--|:--:|:--:|:--|
 |sentModel|true||OpenNLPのSentence Detectorのモデルファイルをを指定します。<br>例: "/opt/nlp4l/example-ner/models/en-sent.bin"|
 |tokenModel|true||OpenNLPのTokenizerのモデルファイルをを指定します。<br>例: "/opt/nlp4l/example-ner/models/en-token.bin"|
 |nerModels|true||OpenNLPのName Finderのモデルファイルをを指定します。複数のモデルファイルを指定可能なため、配列形式で定義します。<br>例: [<br>"/opt/nlp4l/example-ner/models/en-ner-person.bin",<br>"/opt/nlp4l/example-ner/models/en-ner-location.bin"<br>]
@@ -73,6 +74,7 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 
 以下のコンフィグレーション例を参考にしてください。
+
 ```
 {
   processors : [
