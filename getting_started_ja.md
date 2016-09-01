@@ -1,6 +1,6 @@
 # Getting Started
 
-## Download & Install
+## ダウンロードとインストール
 
 NLP4L Frameworkの配布用ZIPファイルをダウンロードして、解凍しましょう。
 
@@ -18,11 +18,11 @@ cd nlp4l-framework-x.x.x
 
 ```
 
-##Launch GUI Tool
+## NLP4LのGUIツール
 
-### Launch GUI Tool Server
+### GUIツールサーバの起動
 
-NLP4L FrameworkのGUIツールを起動します。
+NLP4L FrameworkのGUIツールサーバを起動します。
 
 * 起動には、Java 1.8以上がインストールされている必要があります。
 
@@ -31,24 +31,24 @@ NLP4L FrameworkのGUIツールを起動します。
 bin/nlp4l-framework
 
 ```
-### Access to the GUI Tool
+### GUIツールを使う
 
-ブラウザから [http://localhost:9000/](http://localhost:9000/) にアクセスして見て下さい。
+ブラウザから [http://localhost:9000/](http://localhost:9000/) にアクセスしてみて下さい。
 ブラウザの画面に、Welcomeメッセージが画面表示されます。
 
 ![welcome_screen](images/screenshot_welcome.png)
 
-## Play with Example (固有表現抽出)
+## サンプルを試してみる(固有表現抽出)
 
-それでは、サンプルとして提供されている固有表現抽出を動かして見ましょう。
+それでは、固有表現抽出の付属サンプルを動かしてみましょう。
 
 ### 固有表現抽出サンプルの概要
 
-NLP4Lの提供する固有表現抽出ソリューションは、自然言語テキストから固有表現(人名、場所、組織、金額、日付、時間など)を切り出す機能を提供します。
+NLP4Lの提供する固有表現抽出ソリューションは、自然言語で書かれたテキストから固有表現(人名、場所、組織、金額、日付、時間など)を切り出す機能を提供します。
 
 固有表現の抽出には、[Apache OpenNLP (http://opennlp.apache.org/)](http://opennlp.apache.org/)で提供されているName Finderの学習済みモデルを使用することにより、実現されています。
 
-このサンプルでは、文書ID(docID)と自然言語テキスト(body)をCSVデータとして入力し、自然言語テキスト(body)から、人名(Person)と場所(Location)を抽出する処理を行うサンプルとなっています。
+このサンプルでは、文書ID(docID)とテキスト(body)をCSVデータとして入力し、テキスト(body)から、人名(Person)と場所(Location)を抽出する処理を行うサンプルとなっています。
 
 
 ![example_ner](images/example_ner.png)
@@ -57,7 +57,7 @@ NLP4Lの提供する固有表現抽出ソリューションは、自然言語テ
 
 ### OpenNLPモデルファイルのダウンロード
 
-NLP4Lの固有表現抽出では、[Apache OpenNLP (http://opennlp.apache.org/)](http://opennlp.apache.org/)で提供されている学習済みモデルを使用します。これらの学習済みモデルはOpenNLPのサイトよりダウンロードできます。
+NLP4Lの固有表現抽出では、[Apache OpenNLP (http://opennlp.apache.org/)](http://opennlp.apache.org/)で提供されている学習済みモデルを使用します。これらの学習済みモデルはSourceforgeのサイトよりダウンロードできます。
 
 * OpenNLPの学習済みモデルのダウンロードサイト：http://opennlp.sourceforge.net/models-1.5/
 
@@ -74,8 +74,8 @@ NLP4Lの固有表現抽出では、SentenceとTokenの切り出しに、それ�
 ダウンロードしたファイルは、/opt/nlp4l/example-ner/models ディレクトリに配置しておくと、サンプルのコンフィグレーション(後述)を修正することなく使用できるので便利です。
 
 ```
-mkdir -p /opt/nlp4l/example-ner/models/
-cd /opt/nlp4l/example-ner/models/
+mkdir -p /opt/nlp4l/example-ner/models
+cd /opt/nlp4l/example-ner/models
 
 wget http://opennlp.sourceforge.net/models-1.5/en-sent.bin
 wget http://opennlp.sourceforge.net/models-1.5/en-token.bin
@@ -95,7 +95,7 @@ wget http://opennlp.sourceforge.net/models-1.5/en-ner-location.bin
 
 2 .Configファイルをアップロードします。
 サンプルとして提供されている examples/example-opennlp-ner.confを指定して、Uploadボタンを押下してください。
-このConfigファイルには、先の概要の図で説明した通り、CSVデータを読み込み(データはConfigファイル内に埋め込まれています)、学習済みモデルを使用して固有表現を抽出し、テーブル形式のデータ(Dictionaryと呼んでいる)として保存する処理が定義されています。保存した結果は、後述の画面で参照していきます。
+このConfigファイルには、先の概要の図で説明した通り、CSVデータを読み込み(サンプルの英文データはConfigファイル内に埋め込まれています)、学習済みモデルを使用して固有表現を抽出し、テーブル形式のデータ(Dictionaryと呼ばれます)として保存する処理が定義されています。保存した結果は、後述の画面で参照していきます。
 
 
 ```
@@ -189,15 +189,11 @@ Jobの実行が終了すると、StatusがDoneと表示され、結果を見る�
 
 ### Jobの結果
 
-Jobの実行結果は、1. Job Status画面のから該当JobのJobIDをクリックする、または、2. Job Info画面左側に表示されているJobID（#1）をクリックすることで、該当Jobの結果画面に遷移します。
+Jobの実行結果は、(1) Job Status画面のから該当JobのJobIDをクリックする、または、(2) Job Info画面左側に表示されているJobID（#1）をクリックすることで、該当Jobの結果画面に遷移します。
 
-この結果画画では、ご覧のように、固有表現（このサンプルでは、人名と場所）が抽出されていることを確認することが出来ます。
-
+下図の結果画面に示すとおり、固有表現（ここでは人名と場所）が抽出されていることがわかります。
 
 ![job_result_screen](images/screenshot_job_result_ner.png)
-
-
-以上
 
 
 
