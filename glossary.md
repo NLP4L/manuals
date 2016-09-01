@@ -1,7 +1,7 @@
 # Glossary
 
 |          Japanese          |          English          |          Note          |
-|:--------------------------:|:-------------------------:|:----------------------:|
+|:---------------------------|:--------------------------|:-----------------------|
 |リプレイ 	                 |replay                     |                        |
 |専門用語抽出	                 |term extraction            |                        |
 |固有表現抽出	                 |named entity recognition   |                        |
@@ -15,6 +15,9 @@
 |再現率                       |recall                     |                       |
 |情報検索                      |information retrieval     |                       | 
 |ランキング学習                 |learning-to-rank          |                       | 
-|辞書生成統合ツール              |                           |                       |
+|辞書生成統合ツール              |Dictionary Creation Integration Tool|                       |
 |教師あり学習                  |supervised learning         |                       |
 |教師なし学習                   |unsupervised learning      |                       |
+|学習データ                   |training data             |                        |
+|教師データ                   |training data             |                        |
+|訓練データ                   |training data             |                        |
