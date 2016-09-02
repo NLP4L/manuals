@@ -102,4 +102,4 @@ NLP4Lでは、標準提供の辞書生成ソリューションとして、以下
 
 NLP4Lでは、ビルトインのProcessorだけでなく、ユーザがProcessorを開発することも想定しています。
 
-詳しくは、[Programming Guide](dict/dict_programming_guide_ja.md)を参照してください。
+詳しくは、[Programmer's Guide](dict_programmers_guide_ja.md)を参照してください。
