@@ -59,7 +59,7 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 ### settings設定
 
-固有表現抽出プロセッサーで設定可能なのsettingsは、以下の通りです。
+固有表現抽出プロセッサーで設定可能なsettingsは、以下の通りです。
 
 |name|required|default|description|
 |:--|:--:|:--:|:--|
