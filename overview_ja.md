@@ -44,7 +44,7 @@ Massachusetts Institute of Technology, MIT
 NLP4L はユーザが保有しているコーパスを読み込んで Lucene の SynonymFilter に適用できる上記のような辞書ファイルを出力する機能を提供します。具体的には、次のようなソリューションが再現率向上のために提供されます。
 
 |ソリューション|種別|Processor|
-|:----------:|:----:|:------------:|
+|:----------|:----:|:------------|
 |頭文字略語抽出|再現率|AcronymExtractionProcessor|
 |外来語抽出   |再現率|LoanWordsExtractionProcessor (TBD)|
 
@@ -72,7 +72,7 @@ NLP4L はユーザが保有しているコーパスを読み込んで Lucene の
 このようなファセットを使った絞り込み検索を実現する場合、検索対象の文書は、次のように構造化されている必要があります。
 
 | ID | Product | Price | Gender |
-|:--:|:-----------:|:-------:|:--------:|
+|:--:|:-----------|:-------:|:--------:|
 |  1 |CURREN New Men’s Date Stainless Steel Military Sport Quartz Wrist Watch|8.92|Men's|
 |  2 |Suiksilver The Gamer Watch        |87.99|Men's|
 
@@ -81,7 +81,7 @@ NLP4L はユーザが保有しているコーパスを読み込んで Lucene の
 NLP4L はこのような構造を持たない検索対象文書から絞り込み用の検索軸を付加する機能を提供します。具体的には、次のようなソリューションが精度向上のために提供されます。
 
 |ソリューション|種別|Processor|
-|:----------:|:----:|:------------:|
+|:----------|:----:|:------------|
 |固有表現抽出  |精度   |OpenNLPNerProcessor|
 |文書分類     |精度   |ClassificationProcessor|
 |キーフレーズ抽出|精度   |KeyphraseExtractionProcessor|
@@ -123,7 +123,7 @@ NLP4L は辞書生成に自然言語処理や機械学習のテクニックを�
 
 - フレームワーク＆ツールとして、各種ソリューションを提供
 	- NLP4L-DICT (辞書生成統合ツール)
-	- NLP4L-RANKING (ランキング学習ツール)
+	- NLP4L-LTR (ランキング学習ツール)
 - 標準実装のコンポーネントとソリューションを予め提供
 	- 固有表現抽出、文書分類、キーフレーズ抽出、頭文字略語抽出…
 	- LTR(learning-to-rank)
