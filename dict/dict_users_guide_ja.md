@@ -12,4 +12,5 @@
 - Standard Features
 
 	- リプレイ機能 ([日本語](dict_replay_ja.md)／[English](dict_replay.md))
+	- 辞書のダウンロードとデプロイ ([日本語](dict_download_ja.md)／[English](dict_download.md))
 
