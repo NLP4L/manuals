@@ -108,7 +108,7 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 ```
 
-### 出力ディレクトリ
+### 出力Dictionary
 
 固有表現抽出プロセッサーの実行結果として出力されるDictionaryは、settings設定により、以下のようになります。
 
