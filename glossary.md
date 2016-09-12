@@ -4,6 +4,7 @@
 |:---------------------------|:--------------------------|:-----------------------|
 |リプレイ 	                 |replay                     |                        |
 |専門用語抽出	                 |term extraction            |                        |
+|固有表現	                 |named entity   |                        |
 |固有表現抽出	                 |named entity recognition   |                        |
 |文書分類	                     |document classification    |                        |
 |キーフレーズ抽出               |keyphrase extraction       |                        |
