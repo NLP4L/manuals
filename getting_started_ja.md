@@ -89,12 +89,12 @@ wget http://opennlp.sourceforge.net/models-1.5/en-ner-location.bin
 
 ### 新規Jobの登録
 
-1 . [New Job](http://localhost:9000/dashboard/job/new) ボタンを押下してください。Jobの登録画面が表示されます。
+1 . [New Job](http://localhost:9000/dashboard/job/new) リンクをクリックしてください。Jobの登録画面が表示されます。
 
 ![new_job_screen](images/screenshot_new_job.png)
 
 2 .Configファイルをアップロードします。
-サンプルとして提供されている examples/example-opennlp-ner.confを指定して、Uploadボタンを押下してください。
+サンプルとして提供されている examples/example-opennlp-ner.confを指定して、Uploadボタンをクリックしてください。
 このConfigファイルには、先の概要の図で説明した通り、CSVデータを読み込み(サンプルの英文データはConfigファイル内に埋め込まれています)、学習済みモデルを使用して固有表現を抽出し、テーブル形式のデータ(Dictionaryと呼ばれます)として保存する処理が定義されています。保存した結果は、後述の画面で参照していきます。
 
 
@@ -168,14 +168,14 @@ wget http://opennlp.sourceforge.net/models-1.5/en-ner-location.bin
 
 ```
 
-3 . Job Name テキストボックスに、ジョブの名前を入力し、Saveボタンを押下してください。
+3 . Job Name テキストボックスに、ジョブの名前を入力し、Saveボタンをクリックしてください。
 これで新規Jobの登録が完了です。
 
 ![job_info_screen](images/screenshot_job_info.png)
 
 ### Jobの実行
 
-Jobの登録が完了すると、Runボタンが表示されます。Runボタンを押下して、Jobを実行してみましょう。
+Jobの登録が完了すると、Runボタンが表示されます。Runボタンをクリックして、Jobを実行してみましょう。
 実行したJobは、[Job Status](http://localhost:9000/dashboard/job/status)画面で見ることができます。
 
 

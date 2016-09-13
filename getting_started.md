@@ -37,17 +37,17 @@ Go to [http://localhost:9000/](http://localhost:9000/) from your browser to disp
 
 ![welcome_screen](images/screenshot_welcome.png)
 
-## Trying Out a Sample (Named Entity Extraction )
+## Trying Out a Sample (Named Entity Extraction)
 
-Let's run the named Entity Extraction sample included in the distribution.
+Let's run the Named Entity Extraction sample included in the distribution.
 
 ### Overview of Named Entity Extraction Sample
 
-The named Entity Extraction solution provided by NLP4L is a function that extracts named entities (names of people, locations, organizations, dollar figures, dates, times, etc) from text written in natural language.
+The Named Entity Extraction solution provided by NLP4L is a function that extracts named entities (names of people, locations, organizations, dollar figures, dates, times, etc) from text written in natural language.
 
-This named Entity Extraction is realized by the trained model of Name Finder provided by [Apache OpenNLP (http://opennlp.apache.org/)](http://opennlp.apache.org/).
+This Named Entity Extraction is realized by the trained model of Name Finder provided by [Apache OpenNLP (http://opennlp.apache.org/)](http://opennlp.apache.org/).
 
-This is a sample to show you a process of accepting document ID (docID) and text (body) as CSV data and extracting names of people (Person) and locations (Location) from the ext (body).
+This is a sample to show you a process of accepting document ID (docID) and text (body) as CSV data and extracting names of people (Person) and locations (Location) from the text (body).
 
 
 ![example_ner](images/example_ner.png)
@@ -88,12 +88,12 @@ Now the models are ready. Let's actually use the GUI Tool to run Named Entity Ex
 
 ### Adding a New Job
 
-1. Press the [New Job](http://localhost:9000/dashboard/job/new) button to display the New Job screen.
+1. Click the [New Job](http://localhost:9000/dashboard/job/new) link to display the New Job screen.
 
 ![new_job_screen](images/screenshot_new_job.png)
 
 2. Upload the Config file.
-Specify "examples/example-opennlp-ner.conf" that is provided as a sample and press the " Upload" button.
+Specify "examples/example-opennlp-ner.conf" that is provided as a sample and click the " Upload" button.
 This Config file, as explained in the previous general diagram, defines a process that reads CSV data (sample English sentence data is embedded in the Config file), uses trained models to extract named entities, and saves them as table format data (called Dictionary). We will refer to the saved result on the screen later.
 
 
@@ -167,14 +167,14 @@ This Config file, as explained in the previous general diagram, defines a proces
 
 ```
 
-3. Input a name of job in the Job Name text box and press the Save button.
+3. Input a name of job in the Job Name text box and click the Save button.
 Now you have a new job added.
 
 ![job_info_screen](images/screenshot_job_info.png)
 
 ### Running a Job
 
-The Run button is displayed when a Job is added. Let's press the Run button to run the Job.
+The Run button is displayed when a Job is added. Let's click the Run button to run the Job.
 You can see the started Job on the [Job Status](http://localhost:9000/dashboard/job/status) screen.
 
 
