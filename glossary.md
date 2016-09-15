@@ -2,7 +2,8 @@
 
 |          Japanese          |          English          |          Note          |
 |:---------------------------|:--------------------------|:-----------------------|
-|リプレイ 	                 |replay                     |                        |
+|リプレイ 	              |replay                     |                        |
+|リプレイ処理                |replay process             |                        |
 |専門用語抽出	                 |term extraction            |                        |
 |固有表現	                 |named entity   |                        |
 |固有表現抽出	                 |named entity recognition   |                        |
