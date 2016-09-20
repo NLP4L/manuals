@@ -59,11 +59,11 @@ Settings available for the named entity extraction processor are as follows.
 |:--|:--:|:--:|:--|
 |sentModel|true||Specify a model file for Sentence Detector of OpenNLP.<br>Ex.: "/opt/nlp4l/example-ner/models/en-sent.bin"|
 |tokenModel|true||Specify a model file for Tokenizer of OpenNLP<br>Ex.: "/opt/nlp4l/example-ner/models/en-token.bin"|
-|nerModels|true||Specify a model file for Name Finder of OpenNLP. Define it in the array format because you can specify more than one model file.<br>Ex.: [<br>"/opt/nlp4l/example-ner/models/en-ner-person.bin",<br>"/opt/nlp4l/example-ner/models/en-ner-location.bin"<br>]
+|nerModels|true||Specify model files for Name Finder of OpenNLP. Define it in the array format because you can specify more than one model file.<br>Ex.: [<br>"/opt/nlp4l/example-ner/models/en-ner-person.bin",<br>"/opt/nlp4l/example-ner/models/en-ner-location.bin"<br>]
 |nerTypes|true||Specify named entity types (names of people, locations, dollar figures, etc). Values specified here are used as the Cell name (column name) of output data. Define it in the array format because you can specify more than one named entity type. <br>Ex.: [<br>"person",<br>"location"<br>]
-|srcFields|true||Specify a field name for input data that the named entity extraction bases on. Define it in the array format because you can specify more than one field. <br>Ex.: [<br>"body",<br>"title"<br>]
+|srcFields|true||Specify field names for input data that the named entity extraction bases on. Define it in the array format because you can specify more than one field. <br>Ex.: [<br>"body",<br>"title"<br>]
 |idField|true||Specify a field name for the document ID of input data. <br>Ex.: docId|
-|passThruFields|false| - |Specify when you output the value of input data as it is. You can specify attributes including document title and classification, or a field that named entity extraction bases on. Define it in the array format because you can specify more than one field.<br>Ex.: [<br>"category",<br>"title",<br>"body"<br>]
+|passThruFields|false| - |Specify when you output the value of input data as it is. You can specify attributes including document title and classification, or fields that named entity extraction base on. Define it in the array format because you can specify more than one field.<br>Ex.: [<br>"category",<br>"title",<br>"body"<br>]
 |separator|false|","(comma)|Delimiter used when there is more than one extracted named entity.<br>Ex: ",", "&#124;", and so forth.|
 
 
