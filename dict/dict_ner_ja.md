@@ -6,7 +6,7 @@
 
 NLP4Lの提供する固有表現抽出ソリューションは、自然言語で書かれたテキストから固有表現(人名、場所、組織、金額、日付、時間など)を切り出す機能を提供します。
 
-固有表現の抽出には、[Apache OpenNLP (http://opennlp.apache.org/)](http://opennlp.apache.org/)で提供されているName Finderの学習済みモデルを使用することにより、実現されています。
+固有表現の抽出は、[Apache OpenNLP (http://opennlp.apache.org/)](http://opennlp.apache.org/)で提供されているName Finderの学習済みモデルを使用することにより、実現されています。
 
 ### 利用シナリオ
 
@@ -57,9 +57,9 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 |name|required|default|description|
 |:--|:--:|:--:|:--|
-|sentModel|true||OpenNLPのSentence Detectorのモデルファイルをを指定します。<br>例: "/opt/nlp4l/example-ner/models/en-sent.bin"|
-|tokenModel|true||OpenNLPのTokenizerのモデルファイルをを指定します。<br>例: "/opt/nlp4l/example-ner/models/en-token.bin"|
-|nerModels|true||OpenNLPのName Finderのモデルファイルをを指定します。複数のモデルファイルを指定可能なため、配列形式で定義します。<br>例: [<br>"/opt/nlp4l/example-ner/models/en-ner-person.bin",<br>"/opt/nlp4l/example-ner/models/en-ner-location.bin"<br>]
+|sentModel|true||OpenNLPのSentence Detectorのモデルファイルを指定します。<br>例: "/opt/nlp4l/example-ner/models/en-sent.bin"|
+|tokenModel|true||OpenNLPのTokenizerのモデルファイルを指定します。<br>例: "/opt/nlp4l/example-ner/models/en-token.bin"|
+|nerModels|true||OpenNLPのName Finderのモデルファイルを指定します。複数のモデルファイルを指定可能なため、配列形式で定義します。<br>例: [<br>"/opt/nlp4l/example-ner/models/en-ner-person.bin",<br>"/opt/nlp4l/example-ner/models/en-ner-location.bin"<br>]
 |nerTypes|true||固有表現のタイプ(人名、場所、金額など)を指定します。ここで指定した値は、出力データのCell名(列名)に使用されます。複数の固有表現タイプを指定可能なため、配列形式で定義します。<br>例: [<br>"person",<br>"location"<br>]
 |srcFields|true||固有表現抽出の元となる入力データのフィールド名を指定します。複数のフィールドを指定可能なため、配列形式で定義します。<br>例: [<br>"body",<br>"title"<br>]
 |idField|true||入力データの文書IDのフィールド名を指定します。<br>例: docId|
@@ -114,9 +114,9 @@ class名には、org.nlp4l.framework.builtin.ner.OpenNLPNerRecordProcessorFactor
 
 #### 基本的なsettingsの場合
 
-まず最初に、固有表現抽出の元となるsrcFieldsが１つ、固有抽出用のnerModels(モデルファイル)が1つの場合を見てみましょう。
+まず最初に、固有表現抽出の元となるsrcFieldsが１つ、固有表現抽出用のnerModels(モデルファイル)が1つの場合を見てみましょう。
 
-出力されるDictinaoryは、以下の図のようになります。
+出力されるDictionaryは、以下の図のようになります。
 
 - idField(docId)は、必須項目で、そのまま出力項目となります。
 - srcFields(body)で指定したフィールド名と、nerTypes(person)で指定したタイプ名をアンダースコア(_)で連結した文字列(body_person)が、抽出された固有表現の出力項目となります。
