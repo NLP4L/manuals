@@ -7,7 +7,8 @@
 |専門用語抽出	                 |term extraction            |                        |
 |固有表現	                 |named entity   |                        |
 |固有表現抽出	                 |named entity recognition   |                        |
-|文書分類	                     |document classification    |                        |
+|抽出元                      |extraction origin          |                        |
+|文書分類	             |document classification    |                        |
 |キーフレーズ抽出               |keyphrase extraction       |                        |
 |頭文字（略）語                |acronym                    |                        |
 |類義語                       |synonym                    |                        |
