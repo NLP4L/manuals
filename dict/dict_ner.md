@@ -16,9 +16,9 @@ The following diagram assumes a usage scenario that links extracted named entiti
 
 ![overview_ner](images/dict_ner_overview.png)
 
-## Trying Out Sample (Named Entity Extraction)
+## Play with Example (Named Entity Extraction)
 
-A shortcut to understand more about the named entity extraction solution that NLP4L provides is to take a look at the included samples.
+A shortcut to understand more about the named entity extraction solution that NLP4L provides is to take a look at the included examples.
 
 Getting Started provides a tutorial that uses named entity extraction. Refer to this document for a sample of named entity extraction.
 
