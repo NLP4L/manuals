@@ -21,7 +21,7 @@ Calculate TF/IDF value of words from the text in this training data and make it 
  (Internally, in order to calculate document feature and TF/IDF values, they are temporarily added to Lucene Index to be used.) 
 
 #### Creating Training and Learning Models
-Next, import training data that was output as Labeled-point data and put it thorough the machine learning training (Training) to create a learning model.
+Next, import training data that was output as Labeled-point data and put it thorough the machine learning (Training) to create a learning model.
 
 This machine learning uses Apache Spark MLlib and its classification is multiclass classification. The algorithm, by default, is NaiveBayes and you can use LogisticRegression, DecisionTree/RandomForest, and others depending on your settings.
 
@@ -29,13 +29,13 @@ This machine learning uses Apache Spark MLlib and its classification is multicla
 
 Once learning model is created, you can use it to classify uncategorized documents.
 
-To classify documents, you must give TF/IDF information and parameters from calculation source because feature amount must be calculated from these unclassified text documents as well. Apply feature amount of unclassified text to the trained machine learning model to classify them.
+To classify documents, you must give TF/IDF information and parameters from calculation source because feature amount must be calculated from these unclassified text documents as well. Apply feature amount of unclassified text to the learning model to classify them.
 
 
 ### Usage Scenario 
 
 
-You can use the document classification solution to add classification attributes to unstructured document so you will be able to process them as structured documents. This way, refinement search using facets will be available, and useful for [Incremental Precision Improvement](../overview_ja.md#Incremental Precision Improvement).
+You can use the document classification solution to add classification attributes to unstructured document so you will be able to process them as structured documents. This way, refinement search using facets will be available, and useful for [Incremental Precision Improvement](../overview.md#Incremental Precision Improvement).
 
 ## Playing with Examples (Document Classification)
 
