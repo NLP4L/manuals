@@ -35,7 +35,7 @@ To classify documents, you must give TF/IDF information and parameters from calc
 ### Usage Scenario 
 
 
-You can use the document classification solution to add classification attributes to unstructured document so you will be able to process them as structured documents. This way, refinement search using facets will be available, and useful for [Incremental Precision Improvement](../overview.md#Incremental Precision Improvement).
+You can use the document classification solution to add classification attributes to unstructured document so you will be able to process them as structured documents. This way, refinement search using facets will be available, and useful for [Incremental Precision Improvement](../overview.md#incremental-precision-improvement).
 
 ## Playing with Examples (Document Classification)
 
