@@ -37,9 +37,9 @@ To classify documents, you must give TF/IDF information and parameters from calc
 
 You can use the document classification solution to add classification attributes to unstructured document so you will be able to process them as structured documents. This way, refinement search using facets will be available, and useful for [Incremental Precision Improvement](../overview.md#incremental-precision-improvement).
 
-## Playing with Examples (Document Classification)
+## Playing with Example (Document Classification)
 
-Let's look at the included examples to understand the document classification solution of NLP4L,
+Let's look at the included example to understand the document classification solution of NLP4L.
 
 You can find example configuration file using document classification solution in the examples directory. Play with them in practice.
 
@@ -82,7 +82,7 @@ Settings available for LabeledPointProcessor are as follows.
 |featuresFile|false|-|Specify the word file to become the feature. By default, it is extracted and auto-generated from the textField of input data. <br>Ex: <br>"/opt/nlp4l/example-doc-class/features-in.txt"
 |maxDFPercent|false|99|TF-IDF Value Calculation Parameter : max document frequency (%)<br>Ex: 99|
 |minDF|false|1|TF-IDF Value Calculation Parameter : min document frequency<br>Ex: 1|
-|maxFeatures|false|-1|TF-IDF Value Calculation Parameter : max features<br>Ex: -1<br>-When 1 is specified, the all words are extracted as feature words.|
+|maxFeatures|false|-1|TF-IDF Value Calculation Parameter : max features<br>Ex: -1<br>When -1 is specified, the all words are extracted as feature words.|
 |tfMode|false|n|TF-IDF Value Calculation Parameter : TF mode<br>Ex: "n"<br>tfMode can be set to n/l/m/b/L/w. Refer to computation formula(*1).|
 |smthTerm|false|0.4|TF-IDF Value Calculation Parameter : smoothing param<br>Ex: 0.4|
 |idfMode|false|t|TF-IDF Value Calculation Parameter : IDF mode<br>Ex: "t"<br>idfMode can be set to n/t/T/p/P. Refer to computation formula(*2).|
@@ -242,7 +242,7 @@ Refer to the following example configuration.
 
 ```
 
-### OutputDictionary
+### Output Dictionary
 
 The Dictionary, which is output as an execution result of ClassificationProcessor, will be as follows depending on your settings.
 

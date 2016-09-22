@@ -22,7 +22,7 @@ A shortcut to understand more about the named entity extraction solution that NL
 
 Getting Started provides a tutorial that uses named entity extraction. Refer to this document for a sample of named entity extraction.
 
-- Getting Started ([Japanese](../getting_started_ja.md)/[English](../getting_started.md))
+- Getting Started ([English](../getting_started.md)/[Japanese](../getting_started_ja.md))
 
 ## Configuration (Named Entity Extraction)
 
