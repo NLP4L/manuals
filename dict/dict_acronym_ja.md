@@ -46,7 +46,7 @@ class名には、org.nlp4l.framework.builtin.acronym.AcronymExtractionProcessorF
 |textField|true||頭文字略語抽出を行う対象テキストフィールド名を指定します。|
 |algorithm|true|simpleCanonical|抽出アルゴリズムを指定します。現在は無視されます。|
 
-### Output Dictionary
+### 出力 Dictionary
 
 頭文字略語抽出プロセッサーの結果はacronymsセルに出力されるので、次のように GenericDictionaryAttributeFactory を利用するとよいでしょう。
 
