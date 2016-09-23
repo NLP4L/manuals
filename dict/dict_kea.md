@@ -18,7 +18,7 @@ Let's look at in details.
 
 #### Creating Learning Models
 
-Keyphrase extraction is supervised learning. Therefore, pairs of document and keyphrase extracted from it are needed as the training data.
+Keyphrase extraction is supervised learning. Therefore, pairs of document and a set of keyphrases extracted from it are needed as the training data.
 
 #### Extracting Keyphrases
 
