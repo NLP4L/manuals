@@ -36,7 +36,7 @@ NLP4Lのキーフレーズ抽出ソリューションは、自然言語で書か
 
 NLP4Lのキーフレーズ抽出ソリューションを理解するために、付属のサンプルを見てみましょう。
 
-キーフレーズ抽出ソリューションを使用したサンプルのコンフィグレーションファイルが、exmaplesディレクトリに同梱されていますので、実際に動かして、試してみてください。
+キーフレーズ抽出ソリューションを使用したサンプルのコンフィグレーションファイルが、examplesディレクトリに同梱されていますので、実際に動かして、試してみてください。
 
 |sample|config file|
 |:--|:--|
@@ -53,7 +53,7 @@ NLP4Lのキーフレーズ抽出ソリューションを理解するために、
 |KEAModelBuildProcessor|教師データに基づいて、学習モデルの作成を行う。|
 |KeyphraseExtractionProcessor|作成した学習モデルを用いて、未知文書からキーフレーズ抽出を行う。|
 
-以下では、それぞれのProcessorのConfugurationを説明します。
+以下では、それぞれのProcessorのConfigurationを説明します。
 
 ## Configuration (文書分類)
 
@@ -119,7 +119,7 @@ KeyphraseExtractionProcessorのclass名には、org.nlp4l.framework.builtin.spar
 
 ### settings設定
 
-KeyphraseExtractionProcessor、以下の通りです。
+KeyphraseExtractionProcessorで設定可能なsettingsは、以下の通りです。
 
 |name|required|default|description|
 |:--|:--:|:--:|:--|
