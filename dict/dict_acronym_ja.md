@@ -13,9 +13,21 @@ University of California at Los Angeles, UCLA
 
 NLP4L の頭文字略語抽出は論文[Acrophile: an automated acronym extractor and server](http://dl.acm.org/citation.cfm?id=336664)に紹介されている4つの方法のうち、Simple Canonical の方法を実装したものになります。
 
-### Use Scenario
+### 利用シナリオ
 
 頭文字略語抽出ソリューションを使って頭文字略語（acronym）とその正式名称（expansion）のペアのリストを出力し、出力ファイルを Lucene の SynonymFilter に適用することで再現率の高い検索を行えるようになります。
+
+![acronym](images/dict_acronym.png)
+
+## サンプルを試してみる (頭文字略語抽出)
+
+NLP4Lの頭文字略語抽出ソリューションを理解するために、付属のサンプルを見てみましょう。
+
+文書分類ソリューションを使用したサンプルのコンフィグレーションファイルが、examplesディレクトリに同梱されていますので、実際に動かして、試してみてください。
+
+|sample|config file|
+|:--|:--|
+|英語のサンプルテキストから頭文字略語を抽出する設定例|examples/example-acronym.conf|
 
 ## Configuration
 
