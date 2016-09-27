@@ -6,7 +6,7 @@ The acronym extraction solution outputs a lists of acronym - expansion pairs fro
 
 ```
 World Wide Web, WWW
-Dynamic Host Configuration Protocol, Dynamic Host Configuration Protocol
+Dynamic Host Configuration Protocol, DHCP
 As Far As I Know, AFAIK
 University of California at Los Angeles, UCLA
 ```
