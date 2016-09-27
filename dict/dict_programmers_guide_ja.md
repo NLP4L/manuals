@@ -3,7 +3,7 @@
 
 ## 概要
 
-NLP4Lの辞書生成統合ツールでは、ビルトインの標準コンポーネントを利用するだけでなく、ユーザが独自のコンポーネントをプログラム開発することも想定しています。
+NLP4Lの辞書生成統合ツールは、ビルトインの標準コンポーネントを利用するだけでなく、ユーザが独自のコンポーネントをプログラム開発することも可能です。
 
 ここでは、開発者向けの情報を提供していきます。
 
@@ -13,22 +13,22 @@ NLP4Lの辞書生成統合ツールでは、ビルトインの標準コンポー
 NLP4Lでは、辞書生成統合ツールとしてのライブラリ一式とは別に、開発者用に必要なモジュールを切り出したライブラリを提供しています。
 
 以下の設定例を参考に取得してください。
-（以下の例は、ライブラリのバージョンをnlp4l-framework-library_2.11-0.2.0とした場合）
+（以下の例は、ライブラリのバージョンをnlp4l-framework-library_2.11-0.4.0とした場合）
 
 SBTの設定例
 ```
-libraryDependencies += "org.nlp4l" % "nlp4l-framework-library_2.11" % "0.2.0"
+libraryDependencies += "org.nlp4l" % "nlp4l-framework-library_2.11" % "0.4.0"
 ```
 Ivyの設定例
 ```
-<dependency org="org.nlp4l" name="nlp4l-framework-library_2.11" rev="0.2.0"/>
+<dependency org="org.nlp4l" name="nlp4l-framework-library_2.11" rev="0.4.0"/>
 ```
 Mavenの設定例
 ```
 <dependency>
     <groupId>org.nlp4l</groupId>
     <artifactId>nlp4l-framework-library_2.11</artifactId>
-    <version>0.2.0</version>
+    <version>0.4.0</version>
 </dependency>
 ```
 
@@ -45,21 +45,21 @@ APIドキュメントが以下にありますので、ご参照ください。
 
 - Processorのインプットとアウトプットとなるのは、Dictionaryデータです。
 - このDictionaryデータは、複数のRecordを保持することが出来ます。
-- さらにRecordは、複数のCellと呼んでいる名前付きホルダーに値を保持することが出来ます。
+- さらにRecordは、複数のCellと呼ばれる名前付きホルダーに値を保持することが出来ます。
 
 辞書生成が終了すると、Dictionaryは、データベースに保存され、GUIツールで閲覧・修正可能となります。
-この際に利用されるのが、DictionaryAttributeやCellAttributeです。生成されたDictionaryのCellの名前や型などの属性を定義してやる必要があります。
+このとき利用されるのが、DictionaryAttributeやCellAttributeです。生成されたDictionaryのCellの名前や型などの属性を定義する必要があります。
 
 
 ![pgm_datamodel](images/dict_pgm_datamodel.png)
 
 ## ユーザ開発のProcessor
 
-ここでは、ユーザが独自のProcessorを実装する方法について、記述していきます。
+ここでは、ユーザが独自のProcessorを実装する方法について説明します。
 
 ### ProcessorFactoryの実装
 
-Processorを使用するには、まず、Processorを生成するFactoryクラスであるProcessorFactoryを実装する必要があります。
+Processorを使用するには、Processorを生成するFactoryクラスであるProcessorFactoryが必要です。
 
 - ProcessorFactoryを継承したクラスを作成して、getInstance関数を実装。
 - Configurationで設定したsettings(Configクラス)が引数として渡されるため、必要に応じてsettingsよりパラメータを取得。
@@ -80,11 +80,11 @@ class SimpleProcessorFactory(settings: Config) extends ProcessorFactory(settings
 
 ### Processorの実装
 
-ProcessorFactoryでインスタンス化され、実際の処理を行う、Processorを実装します。
+次に実際の処理を行うProcessorを実装します（Processorは前述のProcessorFactoryでインスタンス化されます）。
 
 - Processorを継承したクラスを作成して、execute関数を実装。
-- execute関数の引数として渡されるインプットのDictionaryデータを受け取り、処理を実装。
-- アウトプットとなるDictionaryデータを生成して、executeメソッドの戻り値として返す。
+- execute関数の引数として渡されるDictionaryデータを受け取り、処理を実装。
+- 出力Dictionaryデータを生成して、executeメソッドの戻り値として返す。
 
 
 ```
@@ -122,7 +122,7 @@ class SimpleProcessor(val param1: String, val param2: Int) extends Processor {
 
 ### Processorのコンフィグレーション
 
-実装したProcessorは、標準のProcessorと同じように、コンフィグレーションして使用できます。
+実装したProcessorは、標準のProcessorと同じように、設定ファイルに指定して使用します。
 
 ```
   processors : [
@@ -137,7 +137,7 @@ class SimpleProcessor(val param1: String, val param2: Int) extends Processor {
 
 ## ユーザ開発のDictionaryAttribute
 
-ここでは、ユーザが独自のDictionaryAttributeを実装する方法について、記述していきます。
+ここでは、ユーザが独自のDictionaryAttributeを実装する方法について説明します。
 
 ### DictionaryAttributeの実装
 
@@ -182,7 +182,7 @@ class SimpleDictionaryAttributeFactory(settings: Config) extends DictionaryAttri
 
 ### DictionaryAttributeのコンフィグレーション
 
-実装したDictionaryAttributeは、標準のDictionaryAttributeと同じように、コンフィグレーションして使用できます。
+実装したDictionaryAttributeは、標準のDictionaryAttributeと同じように、設定ファイルに指定して使用します。
 
 ```
   dictionary : [
@@ -196,10 +196,6 @@ class SimpleDictionaryAttributeFactory(settings: Config) extends DictionaryAttri
     }
   ]
 ```
-
-以上
-
-
 
 
 
