@@ -26,3 +26,4 @@
 |訓練データ                  |training data              |                        |
 |特徴量                      |feature amount             |                        |
 |多クラス分類                |multicalss classification  |                        |
+|名前付きホルダー            |named holder               |                        |
