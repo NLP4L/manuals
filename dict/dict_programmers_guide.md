@@ -144,7 +144,7 @@ Now, users can implement their own DictionaryAttribute as follows.
 
 - Create a class that inherited DictionaryAttributeFactory and implement the getInstance function.
 - Obtain a parameter as needed because the settings(Config class) that is set in Configuration is passed to as an argument.
-- Set or implement､on your own, CellAttribute (attribute for Cell).
+- Set or implement on your own, CellAttribute (attribute for Cell).
 - Pass a list of CellAttribute to and instantiate the DictionaryAttribute class.
 
 ```
