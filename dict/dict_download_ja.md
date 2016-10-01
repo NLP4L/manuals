@@ -4,18 +4,17 @@
 
 ## 概要
 
-NLP4Lの辞書生成統合ツールでは、生成された辞書データをファイル出力してダウンロードする機能が提供されています。また、サーバへ直接デプロイする仕組みも提供されています。
+NLP4Lの辞書生成統合ツールは、生成された辞書データをファイル出力してダウンロードする機能を提供しています。また、サーバ（検索エンジン）へ直接デプロイする仕組みも提供しています。
 
-このダウンロードとデプロイ機能を有効にするには、ダウンロードしたいJobのConfigファイルに設定する必要があります。
+ダウンロードとデプロイ機能を有効にするには、Configファイルに以下で説明する設定をするだけです。
 
-生成された辞書データをファイル出力するには、Writerと呼ばれる辞書データをファイル出力するコンポーネント（標準ではJsonファイル形式とCSVファイル形式へ出力するWriterが提供されている）を設定します。また、サーバへ直接デプロイしたい場合には、Deployerと呼ばれるコンポーネントを設定します。Deployする必要が無いない場合、Writerの設定だけでも大丈夫です。WriterとDeployerの設定に関しては、後述します。
-
+生成された辞書データをファイルに出力するには、Writerと呼ばれるコンポーネント（JSONファイル形式とCSVファイル形式へ出力するWriterは標準で提供）を設定します。また、サーバへ直接デプロイするには、Deployerと呼ばれるコンポーネントを設定します。デプロイする必要がない場合、Writerの設定だけでも大丈夫です。WriterとDeployerの設定に関しては、後述します。
 
 ![overview_download](images/dict_download_overview.png)
 
-Writerの設定を行うと、GUIツールにDownloadボタンが表示されます。Downloadボタンを押下すると、Writerが実行され、Writerが出力したファイルをブラウザよりダウンロードできます。
+Writerの設定を行うと、GUIツールにDownloadボタンが表示されます。Downloadボタンを押下すると、Writerが実行され、Writerが出力したファイルをブラウザからダウンロードできます。
 
-また、Deployerの設定を行うと、Deployボタンが表示されるようになります。Deployボタンを押下すると、まず、Writerが実行され、その後、Writerが出力したファイルを、Deployerが処理します。
+Deployerの設定を行うと、Deployボタンが表示されます。Deployボタンを押下すると、まず、Writerが実行され、その後、Writerが出力したファイルを、Deployerが処理します。
 
 ![scnreenshot_download](images/screenshot_download.png)
 
@@ -24,7 +23,7 @@ Writerの設定を行うと、GUIツールにDownloadボタンが表示されま
 
 辞書データをファイル出力するには、Writerの設定を行います。
 
-標準では、Jsonファイル形式とCSVファイル形式へ出力するWriterが提供されています。
+標準では、JSONファイル形式とCSVファイル形式へ出力するWriterが提供されています。
 
 ### JsonFileWriterの設定
 以下のコンフィグレーション例を参考にしてください。
@@ -121,8 +120,4 @@ HttpFileTransferDeployerで設定可能なsettingsは、以下の通りです。
 |deployToUrl|true||デプロイ先のURL。<br>例: "http://localhost:8983/FileReceiverServlet"|
 |deployToFile|true||保存先のファイル名。<br>例: "/opt/solr/nlp4l/doc-class-dict.csv"|
 
-HttpFileTransferDeployerを使用する場合、別途、受け口となるサーバ側での設定（Servletなど）が必要です。
-
-
-以上
-
+HttpFileTransferDeployerを使用する場合、別途、受け手となるサーバ側での設定（Servletなど）が必要です。
