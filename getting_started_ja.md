@@ -2,19 +2,19 @@
 
 ## ダウンロードとインストール
 
-NLP4L Frameworkの配布用ZIPファイルをダウンロードして、解凍しましょう。
+NLP4L/nlp4lの配布用ZIPファイルをダウンロードして、解凍しましょう。
 
 
-* ダウンロードサイト：https://github.com/NLP4L/framework/releases
+* ダウンロードサイト：https://github.com/NLP4L/nlp4l/releases
 
 ```shell
 mkdir -p /opt/nlp4l
 cd /opt/nlp4l
 
-wget https://github.com/NLP4L/framework/releases/vx.x.x/nlp4l-framework-x.x.x.zip
+wget https://github.com/NLP4L/nlp4l/releases/download/rel-x.x.x/nlp4l-x.x.x.zip
 
-unzip nlp4l-framework-x.x.x.zip
-cd nlp4l-framework-x.x.x
+unzip nlp4l-x.x.x.zip
+cd nlp4l-x.x.x
 
 ```
 
@@ -22,19 +22,25 @@ cd nlp4l-framework-x.x.x
 
 ### GUIツールサーバの起動
 
-NLP4L FrameworkのGUIツールサーバを起動します。
+NLP4L/nlp4lのGUIツールサーバを起動します。
 
 * 起動には、Java 1.8以上がインストールされている必要があります。
 
 
 ```shell
-bin/nlp4l-framework
+bin/nlp4l
 
 ```
 ### GUIツールを使う
 
 ブラウザから [http://localhost:9000/](http://localhost:9000/) にアクセスしてみて下さい。
-ブラウザの画面に、Welcomeメッセージが画面表示されます。
+
+ブラウザの画面に、TOP画面が表示されます。
+Getting Startedでは、NLP4L-DICTプロジェクトのサンプルを利用しますので、 NLP4L-DICTを選択(クリック)します。
+
+![top_screen](images/screenshot_top.png)
+
+NLP4L-DICTを選択すると、以下のようなWelcomeメッセージが画面表示されます。
 
 ![welcome_screen](images/screenshot_welcome.png)
 

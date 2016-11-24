@@ -2,19 +2,19 @@
 
 ## Downloading and Installing NLP4L
 
-Download and unzip the NLP4L Framework distribution file. 
+Download and unzip the NLP4L/nlp4l distribution file.
 
 
-* Download site: https://github.com/NLP4L/framework/releases
+* Download site: https://github.com/NLP4L/nlp4l/releases
 
 ```shell
 mkdir -p /opt/nlp4l
 cd /opt/nlp4l
 
-wget https://github.com/NLP4L/framework/releases/vx.x.x/nlp4l-framework-x.x.x.zip
+wget https://github.com/NLP4L/nlp4l/releases/download/rel-x.x.x/nlp4l-x.x.x.zip
 
-unzip nlp4l-framework-x.x.x.zip
-cd nlp4l-framework-x.x.x
+unzip nlp4l-x.x.x.zip
+cd nlp4l-x.x.x
 
 ```
 
@@ -22,18 +22,25 @@ cd nlp4l-framework-x.x.x
 
 ### Starting GUI Tool Server
 
-Start the NLP4L Framework GUI tool server.
+Start the NLP4L/nlp4l GUI tool server.
 
 * You must have Java 1.8 or later installed to start the server.
 
 
 ```shell
-bin/nlp4l-framework
+bin/nlp4l
 
 ```
 ### Using GUI Tools
 
-Go to [http://localhost:9000/](http://localhost:9000/) from your browser to display a welcome message on your screen.
+Go to [http://localhost:9000/](http://localhost:9000/) from your browser.
+
+You can see Top page on your screen.
+In this Getting Started we use a sample from NLP4L-DICT, click NLP4L-DICT here.
+
+![top_screen](images/screenshot_top.png)
+
+You can see a welcome message on your screen.
 
 ![welcome_screen](images/screenshot_welcome.png)
 
