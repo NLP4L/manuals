@@ -2,17 +2,15 @@
 
 ## 概要
 
-ランキング学習支援ツールでは、予め実装されたビルトインの学習モデルの1つとして、PRankモデルが提供されています。
+NLP4L-LTR は、Pointwise アプローチの1つとして Perceptron Ranking アルゴリズムを利用して実装された PRank のランキング学習プログラムを提供しています。
 
-PRankモデルは、Pointwiseアプローチの1つとして、PRank(Perceptron Ranking)アルゴリズムを利用して実装されたモデルです。
-
-ランキング学習支援ツールを使用して、作成・抽出したAnnotationデータとFeatureデータを元に、機械学習トレーニングを実行し、モデルデータを生成します。
+NLP4L-LTR を使用して作成・抽出した訓練データと Feature データを元に、PRank のランキング学習を行い、モデルデータを生成します。
 
 ![prank](images/ltr_prank.png)
 
 
 ## Config
-PRankモデルを使用するには、Configに、以下のように設定します。
+PRank プログラムを使用するには、Configに以下のように設定します。
 
 
 ![screenshot_model_prank](images/screenshot_model_prank.png)
