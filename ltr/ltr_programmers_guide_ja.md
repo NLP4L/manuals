@@ -3,14 +3,14 @@
 
 ## 概要
 
-NLP4Lのランキング学習支援ツールは、ビルトインの学習モデルを利用するだけでなく、ユーザが独自の学習モデルやデプロイヤをプログラム開発することも可能です。
+NLP4L-LTR は、ビルトインのランキング学習アルゴリズムを利用するだけでなく、ユーザが独自のランキング学習アルゴリズムを実装したプラグインを開発することが可能なように設計されています。
 
-ここでは、開発者向けの情報を提供していきます。
+ここでは、そのようなプラグインを開発する方向けの情報を提供します。
 
 
 ## 開発用ライブラリ
 
-NLP4Lでは、ランキング学習ツールとしてのライブラリ一式とは別に、開発者用に必要なモジュールを切り出したライブラリを提供しています。
+NLP4Lでは、ランキング学習ツールとしてのフレームワークとは別に、開発者向けに必要なモジュールを切り出したライブラリを提供しています。
 
 以下の設定例を参考に取得してください。
 （以下の例は、ライブラリのバージョンをnlp4l-framework-library_2.11-0.5.0とした場合）
@@ -41,11 +41,11 @@ APIドキュメントが以下にありますので、ご参照ください。
 
 
 
-## ユーザ開発の学習モデル
+## ユーザ独自のランキング学習プラグイン開発
 
-ここでは、ユーザが独自の学習モデル（ここではTrainerと呼ぶ）を実装する方法について説明します。
+ユーザが独自のランキング学習プラグイン（ここではTrainerと呼ぶ）を実装する方法について説明します。
 
-ランキング学習ツールでは、教師ありデータをトレーニングして、学習モデルを生成します。主な処理がトレーニングであるため、ここではTrainerと呼んでおり、Trainerクラスを実装することになります。
+NLP4L-LTR では、教師データを学習してランキング学習モデルファイルを生成します。主な処理がトレーニングであるため、開発するプラグインはTrainerと呼ばれ、Trainerクラスを実装することになります。
 
 ### TrainerFactoryの実装
 
@@ -126,7 +126,7 @@ class MyModelTrainer(val numIterations: Int) extends PointwiseTrainer  {
 |引数|型|description|
 |:--|:--|:--|
 |featureNames|Array[String]|選択されたFeature名の配列。|
-|features|Vector[Vector[(Int, Vector[Float])]]|Query毎の学習データ用のFeature値Vectorとラベル値。<br>Query毎に疑似的にPairwiseデータへ変換することを想定して、このようなデータ構造となっている。<br>Query毎のVector[<br>&nbsp;&nbsp;&nbsp;&nbsp;評価データVector[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ラベル値, Feature値Vector)<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>]|
+|features|Vector[Vector[(Int, Vector[Float])]]|Query毎の学習データ用のFeature値Vectorとラベル値。<br>Query毎に疑似的にPairwiseデータへ変換することを想定して、このようなデータ構造となっている。<br>Query毎のVector[<br>&nbsp;&nbsp;&nbsp;&nbsp;訓練データVector[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ラベル値, Feature値Vector)<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>]|
 |progress|TrainingProgress|ProgressBarへの通知用インタフェース。|
 
 
