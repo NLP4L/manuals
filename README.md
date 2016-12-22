@@ -13,3 +13,4 @@
 
 * Overview ([English](ltr/ltr_overview.md)/[日本語](ltr/ltr_overview_ja.md))
 * User's Guide ([English](ltr/ltr_users_guide.md)/[日本語](ltr/ltr_users_guide_ja.md))
+* Programmer's Guide ([English](ltr/ltr_programmers_guide.md)/[日本語](ltr/ltr_programmers_guide_ja.md))
