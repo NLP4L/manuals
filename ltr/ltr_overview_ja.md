@@ -94,7 +94,7 @@ NLP4Lでは、予め実装されたビルトインの学習モデル生成クラ
 |モデル|アプローチ|説明|
 |:--|:--|:--|
 |PRank|Pointwise|PRank(Perceptron Ranking)アルゴリズムを利用したモデル|
-|RankingSVM|疑似Pairwise|SVM(support vector machine)を用いたモデル。<br>Pointwiseデータから疑似的にpairwiseデータに変換して処理を行う。|
+|RankingSVM|疑似Pairwise|SVM(support vector machine)を用いたモデル。<br>Pointwiseデータから疑似的にPairwiseデータに変換して処理を行う。|
 
 これらの標準提供モデル関しては、 [NLP4L-LTR User's Guide](ltr_users_guide_ja.md)を参照してください。
 
