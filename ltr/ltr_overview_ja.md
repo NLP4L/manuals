@@ -61,23 +61,25 @@ Annotationでは、検索サーバ(Solr/Elasticsearch)に対して検索を実�
 
 ###  Feature extraction
 
-Solr/ElasticsearchのLTR-Featureモジュールと連動し、評価データ（クエリ、検索結果ドキュメント）に関するFeatureの値を取得します。取得したFeatureデータは、モデル生成時に利用されます。
+Solr/ElasticsearchのLTR-Featureモジュールと連動し、学習データに関するFeatureの値を取得します。取得したFeatureデータは、モデル生成時に利用されます。
 
-- 評価データ（クエリ、検索結果ドキュメント）に関するFeatureの値の取得
+- 学習データに関するFeatureの値の取得
 - Solr/ElasticsearchのLTR-Featureモジュールとの連動
 - Featureデータの保存
 
 ###  Train and Model creation
-AnnotationデータとFeatureデータを利用して、トレーニングを行い、モデルデータを生成します。
+
+上述のランキング学習データを利用して、トレーニングを行い、モデルデータを生成します。
+
 トレーニングには、Configで設定した学習モデル生成Factoryクラスが利用されるため、様々なモデル実装を利用することができます
 
-- AnnotationデータとFeatureデータを利用した機械学習とモデルの生成
+- ランキング学習データを利用した機械学習とモデルの生成
 - 生成したモデルのSolr/Elasticsearchへの配備(デプロイ)
 
 生成・配備されたモデルは、Solr/ElasticsearchのLTR-ReRankモジュールと連動して、検索時のReRankに利用されます。
 
 
-## NLP4Lのsolrプロジェクト
+## NLP4LのSolrプロジェクト
 
 ランキング学習ツールは、Solr/Elasticsearch側のLTRモジュールと連動して動作します。（現時点では、Solrのみサポート）
 
