@@ -83,7 +83,7 @@ Solr/ElasticsearchのLTR-Featureモジュールと連動し、学習データに
 
 ランキング学習ツールは、Solr/Elasticsearch側のLTRモジュールと連動して動作します。（現時点では、Solrのみサポート）
 
-Solr側の機能や設定に関しては、「[NLP4Lのsolrプロジェクト](https://github.com/NLP4L/solr)」を参照してください。
+Solr側の機能や設定に関しては、「[NLP4LのSolrプロジェクト](https://github.com/NLP4L/solr)」を参照してください。
 
 
 
