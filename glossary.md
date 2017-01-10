@@ -27,3 +27,5 @@
 |特徴量                      |feature amount             |                        |
 |多クラス分類                |multicalss classification  |                        |
 |名前付きホルダー            |named holder               |                        |
+|境界スコア値                |boundary score             |                        |
+|生成クラス                  |creation class             |                        |
