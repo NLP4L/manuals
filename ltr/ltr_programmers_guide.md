@@ -74,7 +74,7 @@ The learning to rank tool provides the following types of Trainer and each Train
 |type|description|
 |:--|:--|
 |Pointwise|Pointwise type trainer|
-|pseudoPairwise|trainer to convert Pointwise type data artificially to Pairwise type before processing|
+|pseudo Pairwise|trainer to convert Pointwise type data artificially to Pairwise type before processing|
 |Pairwise|Pairwise type trainer (Currently not supported)|
 
 ![trainer](images/ltr_trainer.png)
@@ -116,10 +116,10 @@ class MyModelTrainer(val numIterations: Int) extends PointwiseTrainer {
 }
 ```
 
-### Implementing Trainer (pseudoPairwise) 
+### Implementing Trainer (pseudo Pairwise) 
 
 - Create a class that inherited PseudoPairwiseTrainer and implement the train function.
-- Receive learning data (pseudoPairwise type), which is passed as an argument of train function, and implement the process.
+- Receive learning data (pseudo Pairwise type), which is passed as an argument of train function, and implement the process.
 - Create model data and return it as the return value of train method.
 
 ##### Explanation of Arguments
