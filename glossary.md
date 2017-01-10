@@ -31,3 +31,4 @@
 |境界スコア値                |boundary score             |                        |
 |生成クラス                  |creation class             |                        |
 |疑似ペアワイズ              |pseudo pairwise            |                        |
+|擬似的に                    |artificially               |                        |
