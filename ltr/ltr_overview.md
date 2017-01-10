@@ -11,7 +11,7 @@ The framework for learning to rank is divided into the following phases.
 1. Create training data
 2. Extract Feature
 3. Create model
-4. Allocate model
+4. Deploy model
 
 Though there are variety of models related to the learning to rank, NLP4L-LTR can be used independent of a particular model. Therefore, when you are incorporating a program that implements a new learning to rank model, you only have to implement a few interfaces that this tool provides to run it on the framework of NLP4L-LTR.
 
@@ -58,7 +58,6 @@ Annotation performs search on server (Solr/Elasticsearch) and manually annotates
 
 ### Click Model
 (works in progress) 
- (執筆中) 
 
 ### Feature extraction
 
@@ -97,10 +96,10 @@ NLP4L has the learning model creation class already implemented and built-in.
 |PRank|Pointwise|model that uses PRank(Perceptron Ranking) algorithm|
 |RankingSVM|PseudoPairwise|models that use SVM(Support Vector Machine).<br>Artificially convert from Pointwise data to Pairwise data to process|
 
-Refer to [NLP4L-LTR User's Guide](ltr_users_guide_ja.md) for these standard models.
+Refer to [NLP4L-LTR User's Guide](ltr_users_guide.md) for these standard models.
 
 ## User Developed Models
 
 NLP4L assumes that user will not only use built-in models but also develop their own models.
 
-Refer to [NLP4L-LTR Programmer's Guide](ltr_programmers_guide_ja.md) for more details.
+Refer to [NLP4L-LTR Programmer's Guide](ltr_programmers_guide.md) for more details.
