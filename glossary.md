@@ -2,6 +2,7 @@
 
 |          Japanese          |          English          |          Note          |
 |:---------------------------|:--------------------------|:-----------------------|
+|デプロイヤ                  |deployer                   |                        |
 |リプレイ 	             |replay                     |                        |
 |リプレイ処理                |replay process             |                        |
 |専門用語抽出	             |term extraction            |                        |
@@ -27,3 +28,7 @@
 |特徴量                      |feature amount             |                        |
 |多クラス分類                |multicalss classification  |                        |
 |名前付きホルダー            |named holder               |                        |
+|境界スコア値                |boundary score             |                        |
+|生成クラス                  |creation class             |                        |
+|疑似ペアワイズ              |pseudo pairwise            |                        |
+|擬似的に                    |artificially               |                        |

@@ -2,13 +2,9 @@
 
 ## 概要
 
-ランキング学習支援ツールでは、予め実装されたビルトインの学習モデルの1つとして、RankingSVMモデルが提供されています。
+NLP4L-LTR は、Pairwise アプローチの1つとして SVM(support vector machine) アルゴリズムを利用して実装された RankingSVM のランキング学習プログラムを提供しています。SVM の学習には、[Apache Spark (http://spark.apache.org/)](http://spark.apache.org/)で提供されている MLlib を使用しています。
 
-RankingSVMモデルは、SVM(support vector machine)を用いたモデルです。SVMには、[Apache Spark (http://spark.apache.org/)](http://spark.apache.org/)で提供されているMachine Learning Library (MLlib)が使用されています。
-
-また、RankingSVMモデルでは、Pointwiseデータから疑似的にpairwiseデータに変換して処理を行います。
-
-ランキング学習支援ツールを使用して、作成・抽出したAnnotationデータとFeatureデータを元に、機械学習トレーニングを実行し、モデルデータを生成します。
+NLP4L-LTR を使用して作成・抽出した訓練データと Feature データを元に、RankingSVM のランキング学習を行い、モデルデータを生成します。なお、NLP4L-LTR の RankingSVM プログラムでは、Pointwise データから疑似的に Pairwise データを生成して処理を行います。
 
 ![rankingsvm](images/ltr_rankingsvm.png)
 
