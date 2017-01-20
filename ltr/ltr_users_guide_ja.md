@@ -5,6 +5,10 @@
 
 	- GUIツール利用ガイド ([日本語](ltr_gui_guide_ja.md)／[English](ltr_gui_guide.md))
 
+- Click Model
+
+	- クリックログ分析とインポート ([日本語](ltr_import_ja.md)／[English](ltr_import.md))
+
 - Built-in Models
 
 	- PRank ([日本語](ltr_model_prank_ja.md)／[English](ltr_model_prank.md))
