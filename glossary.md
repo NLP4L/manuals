@@ -25,7 +25,9 @@
 |学習データ                  |training data              |                        |
 |教師データ                  |training data              |                        |
 |訓練データ                  |training data              |                        |
+|特徴                        |feature                    |                        |
 |特徴量                      |feature amount             |                        |
+|特徴抽出                    |feature extraction         |                        |
 |多クラス分類                |multicalss classification  |                        |
 |名前付きホルダー            |named holder               |                        |
 |境界スコア値                |boundary score             |                        |
