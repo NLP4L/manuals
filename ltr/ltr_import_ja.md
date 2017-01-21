@@ -21,15 +21,15 @@ NLP4L-LTR では、実アプリケーションで実際にユーザが検索し�
 
 ここではインポート機能の画面操作について説明します。
 
-インポート機能を利用するには、まず、インポート対象のConfigを設定(既に設定がある場合は、Load)し、Query画面の「Import」ボタンを押下します。
+インポート機能を利用するには、まず、インポート対象のConfigを設定(既に設定がある場合は、Load)し、Query画面のImportボタンをクリックします。
 
 ![screenshot_import_query](images/screenshot_import_query.png)
 
-「Import」ボタンを押下すると、インポート用の画面に遷移します。
+Importボタンをクリックすると、インポート用の画面に遷移します。
 
 ![screenshot_import](images/screenshot_import.png)
 
-インポート画面では、インポートのtypeを選択し、import settingsでパラメータ設定を行い、インポートするデータファイルを選択して、「Import」ボタンを押下します。
+インポート画面では、インポートのtypeを選択し、import settingsでパラメータ設定を行い、インポートするデータファイルを選択して、Importボタンをクリックします。
 
 - Query Annotation Data
 	- Query Annotation Data(CSV)をインポートする場合に選択します。
@@ -45,7 +45,7 @@ NLP4L-LTR では、実アプリケーションで実際にユーザが検索し�
 	- インプレッションログは、DCMとしてクリックログ分析され、インポートされます。
 	- 後述のimport settingsが必要です。
 
-「Import」ボタンを押下すると、インポート結果が、ボタン下のエリアに表示されます。
+Importボタンをクリックすると、インポート結果が、ボタン下のエリアに表示されます。
 
 ![screenshot_import](images/screenshot_import_result.png)
 
