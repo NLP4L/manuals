@@ -6,8 +6,8 @@ GUIツールは、5つのメニューからなります。
 
 |menu|description|
 |:--|:--|
-|Config|ランキング学習を行う上で、学習モデルの種類や、検索サーバ(Solr/Elasticsearch)のURL指定など、各種設定を行います。<br>複数の設定を保持することができ、指定(Load)した設定に従ってQuery/Annotation/Feature/Trainingが動作します。|
-|Query|クエリ文字列の一覧管理を行います。<br>Annotationで使用するクエリの一覧が表示されます。クエリ文字列を記述したファイルをアップロードして登録したり、不要なクエリの削除などの操作を行います。<br>また、実アプリケーションでユーザが検索してクリックしたログを分析して、アノテーション付きクエリデータとして、インポートすることも出来ます。|
+|Config|ランキング学習モデルの種類や、検索サーバ(Solr/Elasticsearch)のURL指定などの各種設定を行います。<br>複数の設定を保持することができ、指定(Load)した設定に従ってQuery/Annotation/Feature/Trainingが動作します。|
+|Query|クエリ文字列の一覧管理を行います。<br>Annotationで使用するクエリの一覧が表示されます。クエリ文字列を記述したファイルをアップロードして登録したり、不要なクエリの削除なども可能です。<br>また、実アプリケーションでユーザが検索してクリックしたログを分析して、アノテーション付きクエリデータとして、インポートすることも出来ます。|
 |Annotation|検索サーバ(Solr/Elasticsearch)に対してクエリ文字列を使って検索を実行し、検索結果一覧を表示します。Annotatorは各文書に星マークを付与することでクエリに対する文書の関連度を評価します。|
 |Feature|アノテーション付けされた文書のクエリに対する特徴抽出を行います。<br>特徴抽出は検索サーバ(Solr/Elasticsearch)側で行われるため、選択可能な特徴がその名称とともにサーバ側にて事前に設定されている必要があります。|
 |Training|ランキング学習を実行し、モデルファイルを生成します。生成されたモデルファイルを、サーバにデプロイすることも出来ます。|
@@ -17,7 +17,7 @@ GUIツールは、5つのメニューからなります。
 ![screenshot_menu](images/screenshot_menu.png)
 
 
-以下に、それぞれのメニュー毎に、詳細を説明していきます。
+以下、それぞれのメニュー毎に詳細を説明します。
 
 ## Config画面
 
@@ -29,12 +29,12 @@ Config画面では、学習モデルの種類、関連度合のレベルや、�
 
 |設定項目|説明|
 |:--|:--|
-|Name|コンフィグレーションの名前。<br>複数のコンフィグ設定を保持可能なため、名前で識別できるようにしておく。|
+|Name|コンフィグレーションの名前。<br>複数のコンフィグ設定が保持できるため、名前で識別できるようにしておく。|
 |Annotation Type|pointwise / pairwise / listwise。（現時点では pointwiseのみサポート）|
 |Relevance Degree|ランク付けの関連度合レベルの設定。1～5までの5段階より選択。<br>ここで設定した値に従い、Annotation画面のランク付けで最大表示される星マークの数が決まる。|
 |Trainer Factory Class|ランキング学習のFactoryClassを指定する。<br>例: org.nlp4l.ltr.support.procs.PRankTrainerFactory|
 |- settings|上記のTrainer Factory Classに引き渡される設定。<br>例: { "numIterations": 2000 }|
-|Search URL|検索サーバ(Solr/Elasticsearch)のURL。（現時点では Solrのみサポート）<br>${query}の箇所がクエリ文字列に置き換えられて検索サーバへリクエストが送られる。<br>JSON形式でリプライを受け取ることを想定しているため、wt=jsonを付加する必要がある。<br>ハイライトなどの指定も可能。<br>例: http://localhost:8983/solr/collection1/select?q=${query}&wt=json|
+|Search URL|検索サーバ(Solr/Elasticsearch)のURL。（現時点では Solrのみサポート）<br>${query}の箇所がクエリ文字列に置き換えられて検索サーバへリクエストが送られる。<br>JSON形式で検索結果を受け取ることを想定しているため、wt=jsonを付加する必要がある。<br>ハイライトなどの指定も可能。<br>例: http://localhost:8983/solr/collection1/select?q=${query}&wt=json|
 |Feature Extract URL|Feature抽出用の検索サーバ(Solr/Elasticsearch)のURL。（現時点では Solrのみサポート）<br>サーバ側でFeature抽出用の設定が必要。<br>例: http://localhost:8983/solr/collection1/features|
 |Feature Extract Config|Feature抽出時に検索サーバ側で使用するコンフィグファイル名。<br>例: ltr_features.conf|
 |Document Unique Field|文書のユニークフィールドの名前。<br>例: id|
@@ -53,13 +53,13 @@ Config画面では、学習モデルの種類、関連度合のレベルや、�
 
 #### 変更・削除
 
-画面左のサイドバーに表示されたコンフィグの一覧から、編集したいコンフィグのリンクをクリックすると、そのConfigの設定が変更可能となります。設定を編集後、Saveボタンをクリックすることで、設定が変更されます。
+画面左のサイドバーに表示されたコンフィグの一覧から、変更したいコンフィグのリンクをクリックします。設定を編集後、Saveボタンをクリックすることで、設定が変更されます。
 
-また、Deleteボタンをクリックすると、削除できます。(削除は、削除対象のConfigがLoadされている状態の時は削除できません。一旦他のConfigをLoadしてから、削除対象のConfigを選択して削除するようにしてください。)
+また、Deleteボタンをクリックすると、削除できます。(削除対象のConfigがLoadされている状態の時は削除できません。一旦他のConfigをLoadしてから、削除対象のConfigを選択して削除してください。)
 
 #### Configの切り替え
 
-ランキング学習ツールでは、複数のConfigを設定・保持して、切り替えて使用することが出来ます。
+複数のConfigを設定し、切り替えて使用できます。
 
 Configの切り替えは、画面左のサイドバーに表示されたConfigの一覧から、使用したいConfigのリンクをクリックして選択し、Loadボタンをクリックすることで切り替わります。現在使用中のConfigの名前が、画面上部メニューのConfigの横に表示されます。
 
@@ -70,9 +70,9 @@ Configの切り替えは、画面左のサイドバーに表示されたConfig�
 
 ## Query画面
 
-Query画面では、Queryの一覧を管理します。
+Query画面では、クエリ文字列の一覧を管理します。
 
-この画面では、Annotationで使用するQueryの一覧が表示されます。Annotation済のQueryに関しては、Annotation Status欄にdoneと表示されます。
+この画面では、Annotationで使用するクエリ文字列の一覧が表示されます。アノテーション済みのクエリ文字列は、Annotation Status欄がdoneと表示されます。
 
 クエリ文字列のリンクをクリックすると、Annotation画面に遷移します。
 
@@ -99,7 +99,7 @@ title:London
 
 クエリを削除するには、対象となるクエリのチェックボックスを選択し、テーブル左上のDeleteボタンをクリックします。
 
-Annotation済みクエリに対して、Annotationデータをクリアするには、対象となるクエリのチェックボックスを選択し、テーブル左上のClearボタンをクリックします。また、全てのクエリのAnnotationデータをクリアしたい場合には、画面右上のClear Allボタンをクリックします。
+アノテーション済みクエリに対して、Annotationデータをクリアするには、対象となるクエリのチェックボックスを選択し、テーブル左上のClearボタンをクリックします。また、全てのクエリのAnnotationデータをクリアしたい場合には、画面右上のClear Allボタンをクリックします。
 
 #### インポート
 
@@ -161,7 +161,7 @@ Query画面で見ると、最後に新しいクエリ文字列が追加されて
 
 ![screenshot_annotation_savenew](images/screenshot_annotation_savenew.png)
 
-このクエリ文字列入力欄とSearch、Saveボタンの機能を利用することにより、事前にクエリ文字列を準備していなくても、自由にクエリ文字列を指定して検索して、アノテーション付けを行いながら、クエリ文字列登録を行うことが可能です。
+このクエリ文字列入力欄とSearch、Saveボタンの機能を利用することにより、事前にクエリ文字列を準備していなくても、自由にクエリ文字列を指定して検索し、アノテーション付けを行いながら、クエリ文字列登録を行うことが可能です。
 
 #### 次のQueryへ(Nextボタン)
 
@@ -169,7 +169,7 @@ Nextボタンをクリックした場合、クエリ一覧の中で、現在の�
 
 後ろにアノテーション済みでないクエリ文字列がない場合、「No queries.」と表示されます。
 
-#### Menuバーからの遷移の場合
+#### Menuバーからの遷移した場合
 画面上部のMenuバーの「Annotation」リンクから遷移した場合、まだアノテーションがすんでいない先頭のクエリ文字列が自動選択されて検索されます。
 
 #### クエリ文字列の削除(Deleteボタン)
@@ -181,14 +181,13 @@ Deleteボタンをクリックすると、アノテーションデータがク�
 
 Features画面では、アノテーション付けした文書の各クエリに対する特徴の抽出を行います。
 
-特徴抽出は検索サーバ(Solr/Elasticsearch)側で行われるため、抽出する特徴がその名称とともにサーバ側で事前に設定されている必要があります。
+特徴抽出は検索サーバ(Solr/Elasticsearch)側で行われるため、抽出する特徴がその名称とともにサーバ側にて事前に設定されている必要があります。
 
-ここではサーバ側の記載は省略します。
-サーバ側の設定に関しては、「[NLP4Lのsolrプロジェクト](https://github.com/NLP4L/solr)」の設定を参照してください。
+ここではサーバ側の記載は省略します。サーバ側の設定に関しては、[NLP4Lのsolrプロジェクト](https://github.com/NLP4L/solr)の設定を参照してください。
 
 #### 特徴の抽出
 
-Extractボタンをクリックすることにより、特徴の抽出が始まります。
+Extractボタンをクリックすることにより、特徴抽出が始まります。
 
 ![screenshot_feature](images/screenshot_feature.png)
 
