@@ -56,13 +56,13 @@ Annotationでは、検索サーバ(Solr/Elasticsearch)に対して検索を実�
 - 検索サーバへのクエリ問い合わせ、結果ドキュメントの一覧表示
 - Annotation付けと、Annotationデータ保存
 
+また、GUIを用いて人手でアノテーション付けを行う方法ではなく、別途作成されたQuery Annotation DataのCSVファイルをインポートすることもできます。
+
 ###  Click Model
 クリックログを分析して、Annotationデータを生成します。
 
 - インプレッションログのクリックモデル分析（現在は、Independent Click Model(ICM)とDependent Click Model(DCM)をサポート）
 - クリックモデルのAnnotationデータへの変換
-- 外部で作成されたアノテーション付きクエリーデータのインポート
-
 
 ###  Feature extraction
 
