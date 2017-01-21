@@ -5,6 +5,10 @@
 
 	- GUI Tool Usage Guide ([English](ltr_gui_guide.md)/[日本語](ltr_gui_guide_ja.md))
 
+- Click Model
+
+	- Click Log Analysis and Import ([English](ltr_import.md)/[日本語](ltr_import_ja.md))
+
 - Built-in Models
 
 	- PRank ([English](ltr_model_prank.md)/[日本語](ltr_model_prank_ja.md))
