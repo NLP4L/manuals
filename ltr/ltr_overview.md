@@ -56,8 +56,14 @@ Annotation performs search on server (Solr/Elasticsearch) and manually annotates
 - Inquiring into the search server and displaying the list of result documents.
 - Annotation and saving Annotation data.
 
+Also, you can import a CSV file of Query Annotation Data that is not manually annotated via GUI but is separately created.
+
 ### Click Model
-(works in progress) 
+
+Analyze the click log to create the Annotation data.
+
+- Click model analysis of impression log (Currently, only Independent Click Model(ICM) and Dependent Click Model(DCM) are supported.) 
+- Conversion of click model to Annotation data.
 
 ### Feature extraction
 
