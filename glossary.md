@@ -34,3 +34,6 @@
 |生成クラス                  |creation class             |                        |
 |疑似ペアワイズ              |pseudo pairwise            |                        |
 |擬似的に                    |artificially               |                        |
+|実アプリケーション	     |actual application         |                        |
+|クエリ文字列一覧ファイル    |query character string list file|                   |
+|クリック確率		     |click probability          |                        |
