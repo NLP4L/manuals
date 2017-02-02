@@ -108,7 +108,7 @@ To import data into the system, click the Import button. Clicking the Import but
 
 ![screenshot_import](images/screenshot_import.png)
 
-Refer to [Click Log Analysis and Import ](ltr_import_ja.md) for the import function.
+Refer to [Click Log Analysis and Import ](ltr_import.md) for the import function.
 
 
 ## Annotation Screen 
